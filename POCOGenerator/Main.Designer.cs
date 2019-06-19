@@ -51,6 +51,9 @@
             this.lblVersion = new System.Windows.Forms.Label();
             this.lnkSource = new System.Windows.Forms.LinkLabel();
             this.MyToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cb_saveAs = new System.Windows.Forms.CheckBox();
             this.tabResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.connectionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sqlColumnBindingSource)).BeginInit();
@@ -89,11 +92,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabResult.Controls.Add(this.tabPage1);
             this.tabResult.Controls.Add(this.tabPage2);
-            this.tabResult.Location = new System.Drawing.Point(11, 128);
+            this.tabResult.Location = new System.Drawing.Point(11, 141);
             this.tabResult.Name = "tabResult";
             this.tabResult.Padding = new System.Drawing.Point(20, 4);
             this.tabResult.SelectedIndex = 0;
-            this.tabResult.Size = new System.Drawing.Size(1384, 624);
+            this.tabResult.Size = new System.Drawing.Size(1384, 611);
             this.tabResult.TabIndex = 28;
             // 
             // tabPage1
@@ -101,7 +104,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1376, 596);
+            this.tabPage1.Size = new System.Drawing.Size(1376, 583);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -111,7 +114,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1376, 596);
+            this.tabPage2.Size = new System.Drawing.Size(1376, 583);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -276,12 +279,50 @@
             this.MyToolTip.SetToolTip(this.lnkSource, "Find source in GitHub repository");
             this.lnkSource.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSource_LinkClicked);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(1095, 760);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(129, 13);
+            this.linkLabel1.TabIndex = 45;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Customized by Desz01ate";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MyToolTip.SetToolTip(this.linkLabel1, "Customized by Desz01ate!");
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(1207, 112);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(188, 24);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "Generate from all Tables";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnGenerateAllTables_Click);
+            // 
+            // cb_saveAs
+            // 
+            this.cb_saveAs.AutoSize = true;
+            this.cb_saveAs.Location = new System.Drawing.Point(1113, 118);
+            this.cb_saveAs.Name = "cb_saveAs";
+            this.cb_saveAs.Size = new System.Drawing.Size(81, 17);
+            this.cb_saveAs.TabIndex = 46;
+            this.cb_saveAs.Text = "Save as file";
+            this.cb_saveAs.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1406, 780);
+            this.Controls.Add(this.cb_saveAs);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lnkSource);
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.label1);
@@ -333,6 +374,9 @@
 		private System.Windows.Forms.Label lblVersion;
 		private System.Windows.Forms.LinkLabel lnkSource;
 		private System.Windows.Forms.ToolTip MyToolTip;
-	}
+        internal System.Windows.Forms.Button button1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.CheckBox cb_saveAs;
+    }
 }
 
