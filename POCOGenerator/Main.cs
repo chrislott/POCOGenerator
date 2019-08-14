@@ -150,7 +150,7 @@ namespace POCOGenerator
             }
             catch (Exception ex)
             {
-                MessageBox.Show("GenerateClass", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "GenerateClass", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
